@@ -1,0 +1,36 @@
+@base_url = http://localhost:8111/
+
+@url_get = {{base_url}}GetAllPokemon
+@url_get_id = {{base_url}}GetPokemon/0002
+@url_post = {{base_url}}
+@url_put = {{base_url}}0003
+@url_del = {{base_url}}0003
+
+###
+GET {{url_get}} HTTP/1.1
+
+###
+GET {{url_get_id}} HTTP/1.1
+
+###
+POST {{url_post}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"0004",
+    "name":"mi",
+    "element":"unknow",
+    "weight":"unknow"
+}
+
+###
+PUT {{url_put}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "test":"xx"
+}
+
+###
+DELETE {{url_del}} HTTP/1.1
+
